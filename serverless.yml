@@ -1,0 +1,15 @@
+service: step-fn
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: ap-south-1
+
+plugins:
+  - serverless-step-functions
+
+functions:
+  hello:
+    handler: handler.hello
